@@ -1,0 +1,20 @@
+.rules-section {
+    height: 100dvh;
+    text-align: center;
+    background-color: white;
+
+    h1 {
+        padding-top: 100px;
+        color: black;
+        font-size: 28px;
+    }
+
+    .rules-explanation {
+        margin: 120px 0 150px 0;
+    }
+
+    button {
+        border-color: transparent;
+        background-color: transparent;
+    }
+}
