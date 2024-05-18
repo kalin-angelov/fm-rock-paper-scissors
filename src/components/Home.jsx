@@ -14,18 +14,18 @@ const Home = () => {
       </div>
 
       <div className="weapons-container">
-        <button className="weapon-of-war-paper">
-          <figure className="paper-container">
+        <button id="weapon-of-war-paper" className="weapon-btn">
+          <figure id="paper-container" className="weapon-container">
             <img src="/public/images/icon-paper.svg" alt="paper" />
           </figure>
         </button>
-        <button className="weapon-of-war-scissors">
-          <figure className="scissors-container">
+        <button id="weapon-of-war-scissors" className="weapon-btn">
+          <figure id="scissors-container" className="weapon-container">
             <img src="/public/images/icon-scissors.svg" alt="scissors" />
           </figure>
         </button>
-        <button className="weapon-of-war-rock">
-          <figure className="rock-container">
+        <button id="weapon-of-war-rock" className="weapon-btn">
+          <figure id="rock-container" className="weapon-container">
             <img src="/public/images/icon-rock.svg" alt="rock" />
           </figure>
         </button>
