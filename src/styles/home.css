@@ -1,0 +1,89 @@
+.home-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 31px;
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 311px;
+        height: 99px;
+        border: 3px solid hsl(217, 16%, 45%);
+        border-radius: 5px;
+
+        .instruments-of-war {
+            margin: 0 22px;
+            li {
+                list-style: none;
+               line-height: 0.8;
+            }
+        }
+
+        .score-container {
+            margin: 0 12px;
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: white;
+            width: 80px;
+            height: 72px;
+            text-align: center;
+            line-height: 0.9;
+            padding: 10px 24px;
+
+            h1 {
+                color: hsl(229, 64%, 46%);
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+            p {
+               color: hsl(229, 25%, 31%); 
+               font-size: 40px;
+            }
+        }
+    }
+
+    .weapons-container {
+        display: grid;
+        grid-template-areas:
+        "paper . scissors"
+        ". rock .";
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        .weapon-of-war-paper {
+            grid-area: paper;
+        }
+
+        .weapon-of-war-scissors {
+            grid-area: scissors;
+        }
+
+        .weapon-of-war-rock {
+            grid-area: rock;
+        }
+    }
+
+    .rules-btn-container {
+        width: 127px;
+        height: 40px;
+
+        button {
+            width: inherit;
+            height: inherit;
+            background-color: transparent;
+            color: #f8feff;
+            border: 2px solid #8891a9;
+            border-radius: 5px;
+            font-weight: 600;
+            letter-spacing: 2.3px
+        };
+        
+    }
+}
