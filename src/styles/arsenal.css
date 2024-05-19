@@ -1,0 +1,11 @@
+.weapons-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-areas:
+    "paper scissors"
+    "rock rock";
+    grid-row-gap: 15px;
+    grid-column-gap: 50px;
+    margin: 100px 0 138px 0;
+}
