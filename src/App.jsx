@@ -11,8 +11,8 @@ import Arena from "./components/Arena/Arena";
 
 function App() {
   const [location, setLocation] = useState("home");
-  const [selected, setSelected] = useState('');
-  const [score, setScore] = useState(12);
+  const [selected, setSelected] = useState("");
+  const [score, setScore] = useState(0);
 
   const contextValue = {
     location,
