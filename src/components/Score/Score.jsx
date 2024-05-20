@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { Context } from "../../context/Context";
 
 const Score = () => {
-    const { score} = useContext(Context);
+    const { score } = useContext(Context);
 
     return (
         <div className="container">
