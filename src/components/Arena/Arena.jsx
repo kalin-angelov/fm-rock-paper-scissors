@@ -89,22 +89,29 @@ const Arena = () => {
     <div className="arena-section">
       <Score />
 
-      <div className="arena" style={!result ? {marginBottom: 229} : null}>
-        <div className="user-choice">
+      <div className="arena" style={!result ? {marginBottom: 223} : null}>
+        <div className={result === "You Won" ? "user-choice winner" : "user-choice"}
+          style={result === "You Won" ? {zIndex: 0} : {zIndex: 1}}
+        >
           {selected === "rock" && <Rock />}
           {selected === "paper" && <Paper />}
           {selected === "scissors" && <Scissors />}
-          <p>You Picked</p>
         </div>
+        <p>You Picked</p>
 
-        <div className="house-choice">
+        <div className={
+            result === "" || result === "You Won" || result === "Draw" 
+            ? "house-choice" : "house-choice winner"
+          }
+          style={result === "You Won" ? {zIndex: 1} : {zIndex: 0}}
+        >
           {houseHand === "" ? 
             <div className="empty"></div>
             :
             houseHand
           }
-          <p>The House Picked</p>
         </div>
+        <p>The House Picked</p>
       </div>
      
       {result && 
