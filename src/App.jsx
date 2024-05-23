@@ -10,13 +10,10 @@ import { Context } from "./context/Context";
 import Arena from "./components/Arena/Arena";
 
 function App() {
-  const [location, setLocation] = useState("home");
   const [selected, setSelected] = useState("");
   const [score, setScore] = useState(0);
 
   const contextValue = {
-    location,
-    setLocation,
     selected,
     setSelected,
     score,
