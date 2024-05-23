@@ -18,9 +18,9 @@ const Arsenal = () => {
 
   return (
     <div className="weapons-container">
-      <Paper onSelect={onSelect} setSelected={setSelected} />
-      <Scissors onSelect={onSelect} setSelected={setSelected}/>
-      <Rock onSelect={onSelect} setSelected={setSelected}/>
+      <Paper onSelect={onSelect} />
+      <Scissors onSelect={onSelect} />
+      <Rock onSelect={onSelect} />
     </div>
   )
 }

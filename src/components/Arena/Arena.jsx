@@ -14,6 +14,7 @@ const Arena = () => {
   const { selected, score, setScore } = useContext(Context);
   const [result, setResult] = useState("");
   const [houseHand, setHouseHand] = useState("");
+  console.log(selected);
 
   const lose = "You Lose";
   const won = "You Won";
@@ -77,6 +78,7 @@ const Arena = () => {
         }
       }
     }, "2000");
+    
   },[]);
   
   const navigateToHome = () => {

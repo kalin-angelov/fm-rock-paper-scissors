@@ -4,6 +4,7 @@ import { Context } from "../../context/Context";
 
 const Score = () => {
     const { score } = useContext(Context);
+    console.log(score);
 
     return (
         <div className="container">

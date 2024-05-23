@@ -5,19 +5,23 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "./components/Home/Home";
 import Rules from "./components/Rules/Rules";
-
-import { Context } from "./context/Context";
 import Arena from "./components/Arena/Arena";
 
+import { useLocalStorage } from "./hooks/useLocalStorage";
+import { Context } from "./context/Context";
+
 function App() {
-  const [selected, setSelected] = useState("");
-  const [score, setScore] = useState(0);
+  const [location, setLocation] = useState("home");
+  const [score, setScore] = useLocalStorage("userScore", {score: 0});
+  const [selected, setSelected] = useLocalStorage("userSelection", { selected: "" });
 
   const contextValue = {
+    score,
+    setScore,
+    location,
+    setLocation,
     selected,
     setSelected,
-    score,
-    setScore
   };
 
   return (
