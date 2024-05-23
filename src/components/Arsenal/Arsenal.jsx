@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 const Arsenal = () => {
   const navigate = useNavigate()
-  const { setLocation, setSelected } = useContext(Context);
+  const { setSelected } = useContext(Context);
 
   const onSelect = (weaponOfChoice) => {
     setSelected(weaponOfChoice);
