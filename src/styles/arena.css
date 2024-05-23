@@ -3,16 +3,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 31px 29px 51px 29px;
+    margin: 31px 29px 49px 29px;
 
     .arena {
         display: grid;
         align-items: center;
         justify-content: center;
         grid-template-areas:
-        "userPick housePick";
-        grid-column-gap: 50px;
-        margin: 97px 0px 48px 0px;
+        "userPick housePick"
+        "user house";
+        grid-template-columns: 159px 159px;
+        grid-column-gap: 28px;
+        margin: 97px 0px 42px 0px;
 
         p {
             font-size: 15px;
@@ -20,17 +22,24 @@
             font-weight: 600;
             text-align: center;
             margin: 24px 0px;
+            z-index: 1;
         }
 
         .user-choice {
             grid-area: userPick; 
+            align-self: center;
+            justify-self: center;
+            border-radius: 50%;
+            z-index: 0;
         }
 
         .house-choice {
             grid-area: housePick;
             align-self: center;
             justify-self: center;
-
+            border-radius: 50%;
+            z-index: 0;
+            
             .empty {
                 width: 110px;
                 height: 110px;
@@ -39,11 +48,17 @@
             }
         }
 
+        .winner {
+            box-shadow: 
+            0 0 0 1.2em #2e3d5b,
+            0 0 0 3em #293a58b4,
+            0 0 0 5em #2336567c;
+        }
+
     }
 
     .result {
         font-size: 55px;
-        
     }
 
     .play-again-btn {
@@ -55,7 +70,7 @@
         letter-spacing: 2px;
         font-weight: 600;
         font-size: 15px;
-        margin: 15px 0px 50px 0px;
+        margin: 15px 0px 47px 0px;
         &:hover {
             color: #d0576d;
         }
