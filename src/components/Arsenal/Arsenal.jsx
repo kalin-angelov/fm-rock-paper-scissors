@@ -9,9 +9,12 @@ import { useNavigate } from "react-router-dom";
 
 const Arsenal = () => {
   const navigate = useNavigate()
-  const { setSelected } = useContext(Context);
+  const {windowSize, setArena, setSelected } = useContext(Context);
 
   const onSelect = (weaponOfChoice) => {
+    if (windowSize >= 1024) {
+      setArena(true);
+    };
     setSelected(weaponOfChoice);
     navigate("/arena");
   };
