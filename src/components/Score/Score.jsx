@@ -16,7 +16,7 @@ const Score = () => {
 
             <section className="score-container">
             <h1>score</h1>
-            <p>{score}</p>
+            <p>{12}</p>
             </section>
         </div>
     );
