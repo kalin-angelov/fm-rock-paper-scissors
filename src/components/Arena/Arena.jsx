@@ -2,7 +2,7 @@ import Score from "../Score/Score";
 import Rock from "../Arsenal/Rock";
 import Paper from "../Arsenal/Paper";
 import Scissors from "../Arsenal/Scissors";
-import RulesBtn from "../Rules/RulesBtn";
+import Rules from "../Rules/Rules";
 
 import { Context } from "../../context/Context";
 
@@ -11,10 +11,9 @@ import { useNavigate } from "react-router-dom";
 
 const Arena = () => {
   const navigate = useNavigate();
-  const { selected, score, setScore } = useContext(Context);
+  const { windowSize, arena, setArena, selected, score, setScore } = useContext(Context);
   const [result, setResult] = useState("");
   const [houseHand, setHouseHand] = useState("");
-  console.log(selected);
 
   const lose = "You Lose";
   const won = "You Won";
@@ -27,9 +26,9 @@ const Arena = () => {
   useEffect(() => {
     setTimeout(() => {
       const houseChoice = Math.floor(Math.random() * 3) + 1;
-      
+
       if (houseChoice === 1) {
-        setHouseHand(<Paper />);
+        setHouseHand(<Paper arena={arena}/>);
         switch (selected) {
           case "paper":
             setResult(draw);
@@ -45,7 +44,7 @@ const Arena = () => {
             break;
         }
       } else if (houseChoice === 2){
-        setHouseHand(<Scissors />);
+        setHouseHand(<Scissors arena={arena}/>);
         switch (selected) {
           case "scissors":
             setResult(draw);
@@ -61,7 +60,7 @@ const Arena = () => {
             break;
         }
       } else {
-        setHouseHand(<Rock />);
+        setHouseHand(<Rock arena={arena}/>);
         switch (selected) {
           case "rock":
             setResult(draw);
@@ -84,6 +83,9 @@ const Arena = () => {
   const navigateToHome = () => {
     setResult("");
     navigate("/");
+    if (windowSize >= 1024) {
+      setArena(false);
+    };
   };
 
   return (
@@ -95,9 +97,9 @@ const Arena = () => {
         <div className={result === "You Won" ? "user-choice winner" : "user-choice"}
           style={result === "You Won" ? {zIndex: 0} : {zIndex: 1}}
         >
-          {selected === "rock" && <Rock />}
-          {selected === "paper" && <Paper />}
-          {selected === "scissors" && <Scissors />}
+          {selected === "rock" && <Rock arena={arena} />}
+          {selected === "paper" && <Paper arena={arena}/>}
+          {selected === "scissors" && <Scissors arena={arena}/>}
         </div>
         <p>You Picked</p>
 
@@ -114,16 +116,18 @@ const Arena = () => {
           }
         </div>
         <p>The House Picked</p>
-      </div>
-     
-      {result && 
+
+        {result && 
         <>
           <p className="result">{result}</p>
           <button className="play-again-btn" onClick={navigateToHome}>Play again</button>
         </>
       }
+      </div>
+     
       
-      <RulesBtn />
+      
+      <Rules />
     </div>
   );
 };
