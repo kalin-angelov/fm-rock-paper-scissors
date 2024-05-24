@@ -4,4 +4,31 @@
     justify-content: center;
     align-items: center;
     margin: 31px 31px 51px 31px;
+
+    /* .rules-btn-container {
+        width: 129px;
+        height: 43px;
+    
+        button {
+            width: inherit;
+            height: inherit;
+            background-color: transparent;
+            color: #f8feff;
+            border: 2px solid #8891a9;
+            border-radius: 10px;
+            font-weight: 500;
+            letter-spacing: 2.3px
+        };
+        
+    } */
 }
+
+/* @media screen and (min-width: 1024px) {
+    .home-section {
+        .rules-btn-container {
+            position: absolute;
+            bottom: 29px;
+            right: 33px;
+        }
+    }
+} */
