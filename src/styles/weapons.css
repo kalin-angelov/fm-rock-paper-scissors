@@ -17,6 +17,15 @@
         box-shadow: 0px -3px 0px 1px #b9bcce;
     }
 }
+
+.weapon-btn .arena-choice {
+    width: 300px;
+    height: 300px;
+
+    .weapon-container .arena {
+        width: 300px;
+    }
+} 
     
 #weapon-of-war-paper {
     grid-area: paper;
@@ -39,4 +48,47 @@
     z-index: 0;
     background: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
     box-shadow: 0px 6px 0px 0px #9f1736;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .weapon-btn {
+        width: 197px;
+        height: 201px;
+
+        .weapon-container {
+            width: 152px;
+            height: 152px;
+
+            img{
+                height: 80px;
+            }
+        }
+    }
+
+    .weapon-arena {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border-color: transparent;
+        width: 300px;
+        height: 300px;
+
+        .weapon-arena {
+            width: 226px;
+            height: 222px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0px -3px 0px 1px #b9bcce;
+
+            img{
+                height: 98px;
+            }
+        }
+    }
+
 }
