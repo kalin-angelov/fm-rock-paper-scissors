@@ -43,3 +43,33 @@
         }
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .container {
+        z-index: 1;
+        width: 700px;
+        height: 150px;
+        border-radius: 15px;
+
+        .instruments-of-war {
+            li {
+                font-size: 36px;
+            }
+        }
+
+        .score-container {
+            height: 113px;
+            width: 150px;
+
+            h1 {
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 66px;
+            }
+        }
+
+        
+    }
+}
