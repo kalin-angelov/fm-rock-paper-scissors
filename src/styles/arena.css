@@ -11,17 +11,19 @@
         justify-content: center;
         grid-template-areas:
         "userPick housePick"
-        "user house";
+        "user house"
+        "result result"
+        "button button";
         grid-template-columns: 159px 159px;
         grid-column-gap: 28px;
-        margin: 97px 0px 42px 0px;
+        margin-top: 97px;
 
         p {
             font-size: 15px;
             letter-spacing: 2.7px;
             font-weight: 600;
             text-align: center;
-            margin: 24px 0px;
+            margin: 22px 0px;
             z-index: 1;
         }
 
@@ -55,24 +57,79 @@
             0 0 0 5em #2336567c;
         }
 
-    }
+        .result {
+            font-size: 55px;
+            grid-area: result;
+        }
 
-    .result {
-        font-size: 55px;
+        .play-again-btn {
+            align-self: center;
+            justify-self: center;
+            grid-area: button;
+            width: 220px;
+            height: 50px;
+            color: #424659;
+            background-color: white;
+            border-radius: 10px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 60px;
+            &:hover {
+                color: #d0576d;
+            }
+        }
     }
+}
 
-    .play-again-btn {
-        width: 220px;
-        height: 50px;
-        color: #424659;
-        background-color: white;
-        border-radius: 10px;
-        letter-spacing: 2px;
-        font-weight: 600;
-        font-size: 15px;
-        margin: 15px 0px 47px 0px;
-        &:hover {
-            color: #d0576d;
+@media screen and (min-width: 1024px) {
+    .arena-section {
+        margin-top: 47px;
+        .arena {
+            grid-template-columns: 300px 300px 300px;
+            grid-template-areas: 
+            "user none house"
+            "userPick result housePick"
+            "userPick button housePick";
+            grid-column-gap: 0;
+
+            p {
+                font-size: 23px;
+            }
+
+            .user-choice {
+                width: 292px;
+                height: 300px;
+            }
+
+            .house-choice {
+                .empty {
+                    width: 223px;
+                    height: 225px;
+                    border-radius: 50%;
+                }
+            }
+
+            .winner {
+                box-shadow: 
+                0 0 0 3em #2e3d5b,
+                0 0 0 7.5em #293a58b4,
+                0 0 0 13em #2336567c;
+            }
+
+            .result {
+                z-index: 0;
+                margin-top: 50px;
+                margin-bottom: 0;
+                align-self: self-end;
+            }
+
+            .play-again-btn {
+                z-index: 0;
+                margin-top: 13px;
+                margin-bottom: 75px;
+                align-self: self-start;
+            }
         }
     }
 }
