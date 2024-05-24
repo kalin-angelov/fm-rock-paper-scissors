@@ -1,24 +1,54 @@
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
 
 const Rules = () => {
-  const navigate = useNavigate();
+  const ref = useRef();
+  const [showRules, setShowRules] = useState(false);
 
-  const navigateToHome = () => {
-    navigate("/");
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (showRules && !ref.current.contains(e.target)) {
+        setShowRules(!showRules);
+      };
+    };
+ 
+    window.addEventListener("click", handleClickOutside);
+
+    return (() => {
+      window.removeEventListener("click", handleClickOutside);
+    });
+
+  },[]);
+
+  const handleToggle = () => {
+    setShowRules(!showRules);
   };
-
+  
   return (
-    <section className="rules-section">
-        <h1>Rules</h1>
-        <figure className="rules-explanation">
-            <img src="/images/image-rules.svg" alt="rules" />
-        </figure>
-        <button onClick={navigateToHome}>
-            <figure>
+    <>
+    { showRules &&
+      <div className="rules-section" onClick={handleToggle} ref={ref}>
+        
+          <div className="main-container">
+          <section>
+            <h1>Rules</h1>
+            <button type="button">
+              <figure>
                 <img src="/images/icon-close.svg" alt="close-btn" />
-            </figure>
-        </button>
-    </section>
+              </figure>
+            </button>
+          </section>
+          
+          <figure className="rules-explanation">
+            <img src="/images/image-rules.svg" alt="rules" />
+          </figure>
+        </div>
+      </div>
+    }
+
+    <div className="rules-btn-container">
+      <button type="button" onClick={handleToggle}>Rules</button>
+    </div>
+    </>
   );
 };
 
