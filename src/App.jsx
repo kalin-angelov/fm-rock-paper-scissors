@@ -1,29 +1,31 @@
 import "./App.css";
 
 import { useEffect, useState } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Home from "./components/Home/Home";
 import Arena from "./components/Arena/Arena";
 
-import { useLocalStorage } from "./hooks/useLocalStorage";
+import { useSessionStorage } from "./hooks/useSessionStorage";
 import { Context } from "./context/Context";
 
 function App() {
-  const navigate = useNavigate();
   const [windowSize, setWindowSize] = useState(window.innerWidth);
-  const [arena, setArena] = useState(false);
-  const [score, setScore] = useLocalStorage("userScore", {score: 0});
-  const [selected, setSelected] = useLocalStorage("userSelection", { selected: "" });
+  const [score, setScore] = useSessionStorage("userScore", {score: 0});
+  const [userWeapon, setUserWeapon] = useSessionStorage("userSelection", { userSelected: "" });
+  const [houseWeapon, setHouseWeapon] = useSessionStorage("houseSelection", { houseSelected: "" });
+  const [result, setResult] = useSessionStorage("resultOfMach", { result: "" });
 
   const contextValue = {
     windowSize,
-    arena,
-    setArena,
     score,
     setScore,
-    selected,
-    setSelected,
+    userWeapon,
+    setUserWeapon,
+    houseWeapon,
+    setHouseWeapon,
+    result,
+    setResult
   };
 
   useEffect(() => {
