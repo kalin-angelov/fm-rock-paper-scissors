@@ -1,10 +1,10 @@
 import { useContext } from "react";
-
+import { useNavigate } from "react-router-dom";
 import { Context } from "../../context/Context";
 
 const Score = () => {
+    const navigate = useNavigate();
     const { score } = useContext(Context);
-    console.log(score);
 
     return (
         <div className="container">
@@ -14,9 +14,12 @@ const Score = () => {
             <li>Scissors</li>
             </ul>
 
-            <section className="score-container">
+            <section className="score-container" onClick={() => {
+                navigate("/");
+                setSelected("");
+            }}>
             <h1>score</h1>
-            <p>{12}</p>
+            <div className="score">{score}</div>
             </section>
         </div>
     );

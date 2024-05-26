@@ -1,31 +1,50 @@
 import { useContext } from "react";
 
-import Rock from "./Rock";
-import Paper from "./Paper";
-import Scissors from "./Scissors";
-
 import {Context} from "../../context/Context";
 import { useNavigate } from "react-router-dom";
 
 const Arsenal = () => {
   const navigate = useNavigate()
-  const {windowSize, setArena, setSelected } = useContext(Context);
+  const { setUserWeapon } = useContext(Context);
 
   const onSelect = (weaponOfChoice) => {
-    if (windowSize >= 1024) {
-      setArena(true);
-    };
-    setSelected(weaponOfChoice);
+    setUserWeapon(weaponOfChoice);
     navigate("/arena");
   };
 
   return (
     <div className="weapons-container">
-      <Paper onSelect={onSelect} />
-      <Scissors onSelect={onSelect} />
-      <Rock onSelect={onSelect} />
+        <button 
+          onClick={ () => onSelect("paper") } 
+          id="weapon-of-war-paper" 
+          className="weapon-btn"
+        >
+          <figure id="paper-container" className="weapon-container">
+            <img src="/images/icon-paper.svg" alt="paper" />
+          </figure>
+      </button>
+
+      <button 
+        onClick={ () => onSelect("scissors") } 
+        id="weapon-of-war-scissors" 
+        className="weapon-btn"
+      >
+          <figure id="scissors-container" className="weapon-container">
+              <img src="/images/icon-scissors.svg" alt="scissors" />
+          </figure>
+      </button>
+      
+      <button 
+        onClick={ () => onSelect("rock") } 
+        id="weapon-of-war-rock" 
+        className="weapon-btn"
+      >
+        <figure id="rock-container" className="weapon-container">
+          <img src="/images/icon-rock.svg" alt="rock" />
+        </figure>
+      </button>
     </div>
-  )
-}
+  );
+};
 
 export default Arsenal;
