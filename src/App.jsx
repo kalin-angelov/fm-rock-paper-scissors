@@ -29,10 +29,15 @@ function App() {
   };
 
   useEffect(() => {
+    sessionStorage.setItem("userScore", JSON.stringify(0));
+    sessionStorage.setItem("userSelection", JSON.stringify(""));
+    sessionStorage.setItem("houseSelection", JSON.stringify(""));
+    sessionStorage.setItem("resultOfMach", JSON.stringify(""));
+    
     const windowSizeHandler = () => {
       setWindowSize(window.innerWidth);
     };
-
+    
     window.addEventListener("resize", windowSizeHandler);
 
     return(() => {
