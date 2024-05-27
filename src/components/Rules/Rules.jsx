@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const Rules = () => {
   const ref = useRef();
@@ -46,7 +47,14 @@ const Rules = () => {
     }
 
     <div className="rules-btn-container">
-      <button type="button" >New version</button>
+      <button>
+        <Link 
+          to="https://fm-rock-paper-scissors-lizard-spock.vercel.app/" 
+          target="_blank"
+        >
+        Lizard Spock
+        </Link>
+      </button>
       <button type="button" onClick={handleToggle}>Rules</button>
     </div>
     </>
