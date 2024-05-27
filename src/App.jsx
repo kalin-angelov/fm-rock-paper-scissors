@@ -11,7 +11,7 @@ import { Context } from "./context/Context";
 
 function App() {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
-  const [score, setScore] = useSessionStorage("userScore", {score: 0});
+  const [score, setScore] = useSessionStorage("userScore", 0);
   const [userWeapon, setUserWeapon] = useSessionStorage("userSelection", { userSelected: "" });
   const [houseWeapon, setHouseWeapon] = useSessionStorage("houseSelection", { houseSelected: "" });
   const [result, setResult] = useSessionStorage("resultOfMach", { result: "" });
@@ -29,10 +29,6 @@ function App() {
   };
 
   useEffect(() => {
-    sessionStorage.setItem("userScore", JSON.stringify(0));
-    sessionStorage.setItem("userSelection", JSON.stringify(""));
-    sessionStorage.setItem("houseSelection", JSON.stringify(""));
-    sessionStorage.setItem("resultOfMach", JSON.stringify(""));
     
     const windowSizeHandler = () => {
       setWindowSize(window.innerWidth);
