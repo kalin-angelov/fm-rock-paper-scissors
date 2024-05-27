@@ -7,8 +7,15 @@ const Arsenal = () => {
   const navigate = useNavigate()
   const { setUserWeapon } = useContext(Context);
 
+  const { 
+    setHouseWeapon,
+    setResult
+  } = useContext(Context);
+
   const onSelect = (weaponOfChoice) => {
     setUserWeapon(weaponOfChoice);
+    setHouseWeapon("");
+    setResult("");
     navigate("/arena");
   };
 
