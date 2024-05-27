@@ -17,10 +17,7 @@ const Score = () => {
             <li>Scissors</li>
             </ul>
 
-            <section className="score-container" onClick={() => {
-                navigate("/");
-                setSelected("");
-            }}>
+            <section className="score-container" onClick={() => {navigate("/")}}>
             <h1>score</h1>
             <p className="score">{score}</p>
             </section>
