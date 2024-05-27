@@ -22,7 +22,7 @@ const Score = () => {
                 setSelected("");
             }}>
             <h1>score</h1>
-            <div className="score">{score}</div>
+            <p className="score">{score}</p>
             </section>
         </div>
     );
