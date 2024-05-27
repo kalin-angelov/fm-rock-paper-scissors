@@ -7,7 +7,7 @@
     "rock rock";
     grid-row-gap: 15px;
     grid-column-gap: 50px;
-    margin: 100px 0 138px 0;
+    margin: 100px 0px 138px 0px;
 
     .triangle {
         z-index: 0;
@@ -25,6 +25,7 @@
 
 @media screen and (min-width: 1024px) {
     .weapons-container {
+        margin: 72px 0px 0px 0px;
         .triangle {
             width: 440px;
             height: 140px;
