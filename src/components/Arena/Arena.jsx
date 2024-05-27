@@ -15,10 +15,11 @@ import { useNavigate } from "react-router-dom";
 
 const Arena = () => {
   const navigate = useNavigate();
+
   const { 
     windowSize,
-    score, 
-    setScore, 
+    score,
+    setScore,
     userWeapon,
     houseWeapon, 
     setHouseWeapon,
