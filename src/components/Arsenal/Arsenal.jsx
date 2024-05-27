@@ -21,14 +21,17 @@ const Arsenal = () => {
 
   return (
     <div className="weapons-container">
-        <button 
-          onClick={ () => onSelect("paper") } 
-          id="weapon-of-war-paper" 
-          className="weapon-btn"
-        >
-          <figure id="paper-container" className="weapon-container">
-            <img src="/images/icon-paper.svg" alt="paper" />
-          </figure>
+      <figure className="triangle">
+        <img src="/images/bg-triangle.svg" alt="triangle" />
+      </figure>
+      <button 
+        onClick={ () => onSelect("paper") } 
+        id="weapon-of-war-paper" 
+        className="weapon-btn"
+      >
+        <figure id="paper-container" className="weapon-container">
+          <img src="/images/icon-paper.svg" alt="paper" />
+        </figure>
       </button>
 
       <button 
@@ -37,7 +40,7 @@ const Arsenal = () => {
         className="weapon-btn"
       >
           <figure id="scissors-container" className="weapon-container">
-              <img src="/images/icon-scissors.svg" alt="scissors" />
+            <img src="/images/icon-scissors.svg" alt="scissors" />
           </figure>
       </button>
       
