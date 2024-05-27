@@ -6,6 +6,10 @@
   color: white;
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: 700;
