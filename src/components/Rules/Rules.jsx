@@ -46,6 +46,7 @@ const Rules = () => {
     }
 
     <div className="rules-btn-container">
+      <button type="button" >New version</button>
       <button type="button" onClick={handleToggle}>Rules</button>
     </div>
     </>
