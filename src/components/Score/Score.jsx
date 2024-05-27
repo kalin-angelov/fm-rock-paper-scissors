@@ -1,9 +1,12 @@
 import { useContext } from "react";
+
 import { useNavigate } from "react-router-dom";
+
 import { Context } from "../../context/Context";
 
 const Score = () => {
     const navigate = useNavigate();
+    
     const { score } = useContext(Context);
 
     return (
