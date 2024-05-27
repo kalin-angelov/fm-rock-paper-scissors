@@ -79,7 +79,7 @@ const Arena = () => {
 
         {result && 
         <>
-          <div className="result">{result}</div>
+          <p className="result">{result}</p>
           <button className="play-again-btn" onClick={navigateToHome}>Play again</button>
         </>
       }
