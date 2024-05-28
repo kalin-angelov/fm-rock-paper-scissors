@@ -9,13 +9,13 @@
     border: 3px solid hsl(217, 16%, 45%);
     border-radius: 5px;
 
-    .instruments-of-war {
+    .logo-container{
         margin: 0 22px;
-        li {
-            list-style: none;
-            line-height: 0.8;
-            font-size: 20px;
-            font-weight: 600;
+        width: 85px;
+        height: 50px;
+        img {
+            width: inherit;
+            height: inherit;
         }
     }
 
@@ -51,10 +51,9 @@
         height: 150px;
         border-radius: 15px;
 
-        .instruments-of-war {
-            li {
-                font-size: 36px;
-            }
+        .logo-container {
+            width: 160px;
+            height: 96px;
         }
 
         .score-container {

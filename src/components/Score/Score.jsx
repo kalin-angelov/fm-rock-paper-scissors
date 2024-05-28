@@ -11,11 +11,9 @@ const Score = () => {
 
     return (
         <div className="container">
-            <ul className="instruments-of-war">
-            <li>Rock</li>
-            <li>Paper</li>
-            <li>Scissors</li>
-            </ul>
+            <figure className="logo-container">
+                <img src="/images/logo.svg" alt="logo" />
+            </figure>
 
             <section className="score-container" onClick={() => {navigate("/")}}>
             <h1>score</h1>
