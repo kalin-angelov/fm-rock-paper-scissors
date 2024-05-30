@@ -5,11 +5,11 @@ import Rules from "../Rules/Rules";
 const Home = () => {
 
   return (
-    <main className="home-section">
+    <div className="home-section">
       <Score />
       <Arsenal />
       <Rules />
-    </main>
+    </div>
   );
 };
 

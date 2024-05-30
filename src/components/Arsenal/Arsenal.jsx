@@ -20,7 +20,7 @@ const Arsenal = () => {
   };
 
   return (
-    <div className="weapons-container">
+    <main className="weapons-container">
       <figure className="triangle">
         <img src="/images/bg-triangle.svg" alt="triangle" />
       </figure>
@@ -53,7 +53,7 @@ const Arsenal = () => {
           <img src="/images/icon-rock.svg" alt="rock" />
         </figure>
       </div>
-    </div>
+    </main>
   );
 };
 
