@@ -10,7 +10,7 @@ const Score = () => {
     const { score } = useContext(Context);
 
     return (
-        <div className="container">
+        <header className="container">
             <figure className="logo-container">
                 <img src="/images/logo.svg" alt="logo" />
             </figure>
@@ -19,7 +19,7 @@ const Score = () => {
             <h1>score</h1>
             <p className="score">{score}</p>
             </section>
-        </div>
+        </header>
     );
 };
 

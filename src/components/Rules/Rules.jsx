@@ -46,7 +46,8 @@ const Rules = () => {
       </div>
     }
 
-    <div className="rules-btn-container">
+    <footer className="rules-btn-container">
+
       <Link 
         to="https://fm-rock-paper-scissors-lizard-spock.vercel.app/" 
         target="_blank"
@@ -54,7 +55,7 @@ const Rules = () => {
       Lizard Spock
       </Link>
       <button type="button" onClick={handleToggle}>Rules</button>
-    </div>
+    </footer>
     </>
   );
 };
