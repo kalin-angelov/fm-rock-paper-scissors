@@ -6,6 +6,7 @@
     height: 132px;
     border-radius: 50%;
     border-color: transparent;
+    cursor: pointer;
     .weapon-container {
         display: flex;
         align-items: center;

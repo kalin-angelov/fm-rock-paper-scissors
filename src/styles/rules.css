@@ -41,6 +41,20 @@
     height: 43px;
     display: flex;
 
+    a {
+        width: 129px;
+        height: inherit;
+        background-color: transparent;
+        color: #f8feff;
+        border: 2px solid #8891a9;
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 2.3px;
+        margin: 0 5px;
+        padding: 10px 7px;
+    }
+
     button {
         width: 129px;
         height: inherit;

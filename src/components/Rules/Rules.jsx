@@ -47,14 +47,12 @@ const Rules = () => {
     }
 
     <div className="rules-btn-container">
-      <button>
-        <Link 
-          to="https://fm-rock-paper-scissors-lizard-spock.vercel.app/" 
-          target="_blank"
-        >
-        Lizard Spock
-        </Link>
-      </button>
+      <Link 
+        to="https://fm-rock-paper-scissors-lizard-spock.vercel.app/" 
+        target="_blank"
+      >
+      Lizard Spock
+      </Link>
       <button type="button" onClick={handleToggle}>Rules</button>
     </div>
     </>

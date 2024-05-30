@@ -24,7 +24,7 @@ const Arsenal = () => {
       <figure className="triangle">
         <img src="/images/bg-triangle.svg" alt="triangle" />
       </figure>
-      <button 
+      <div 
         onClick={ () => onSelect("paper") } 
         id="weapon-of-war-paper" 
         className="weapon-btn"
@@ -32,9 +32,9 @@ const Arsenal = () => {
         <figure id="paper-container" className="weapon-container">
           <img src="/images/icon-paper.svg" alt="paper" />
         </figure>
-      </button>
+      </div>
 
-      <button 
+      <div 
         onClick={ () => onSelect("scissors") } 
         id="weapon-of-war-scissors" 
         className="weapon-btn"
@@ -42,9 +42,9 @@ const Arsenal = () => {
           <figure id="scissors-container" className="weapon-container">
             <img src="/images/icon-scissors.svg" alt="scissors" />
           </figure>
-      </button>
+      </div>
       
-      <button 
+      <div 
         onClick={ () => onSelect("rock") } 
         id="weapon-of-war-rock" 
         className="weapon-btn"
@@ -52,7 +52,7 @@ const Arsenal = () => {
         <figure id="rock-container" className="weapon-container">
           <img src="/images/icon-rock.svg" alt="rock" />
         </figure>
-      </button>
+      </div>
     </div>
   );
 };
