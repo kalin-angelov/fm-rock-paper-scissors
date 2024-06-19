@@ -52,7 +52,8 @@
         font-size: 14px;
         letter-spacing: 2.3px;
         margin: 0 5px;
-        padding: 10px 7px;
+        padding: 10px;
+        text-align: center;
     }
 
     button {

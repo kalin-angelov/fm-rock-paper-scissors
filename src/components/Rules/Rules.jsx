@@ -52,7 +52,7 @@ const Rules = () => {
         to="https://fm-rock-paper-scissors-lizard-spock.vercel.app/" 
         target="_blank"
       >
-      Lizard Spock
+      New mode
       </Link>
       <button type="button" onClick={handleToggle}>Rules</button>
     </footer>
