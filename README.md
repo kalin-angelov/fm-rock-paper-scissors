@@ -27,8 +27,8 @@ Users should be able to:
 
 ![Desktop Screenshot](./public/screenshot/Screenshot-desktop.png)
 ![Mobile Screenshot](./public/screenshot/Screenshot-mobile.png)
-![Desktop Screenshot](./public/screenshot/Screenshot-desktop(2).png)
 ![Mobile Screenshot](./public/screenshot/Screenshot-mobile(2).png)
+![Desktop Screenshot](./public/screenshot/Screenshot-desktop(2).png)
 
 ### Links
 
